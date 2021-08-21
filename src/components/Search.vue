@@ -7,28 +7,15 @@
 </template>
 
 <script>
-  import { ref } from "vue";
-  const findAnime = function(anime) {
-    const fetch = require("node-fetch");
-    const ani = anime;
-    const url = `https://api.jikan.moe/v3/search/anime?q=${ani}`;
-    const getData = () => {
-      return fetch(url)
-        .then((d) => d.json())
-        .then((d) => d.results);
-    };
-  };
   export default {
-    setup() {
-      let output = ref("");
-    },
+    setup() {},
   };
 </script>
 
 <style lang="scss" scoped>
   .search-bar {
     display: flex;
-    height: 44px;
+    height: 38px;
     width: 100%;
     margin: 0 auto;
     justify-content: center;
@@ -37,5 +24,13 @@
     box-shadow: none;
     border-radius: 24px;
     background: white;
+  }
+  form {
+    width: 100%;
+    align-self: flex-end;
+  }
+  input {
+    border-width: 0px;
+    border: none;
   }
 </style>
