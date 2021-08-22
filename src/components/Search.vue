@@ -1,9 +1,7 @@
 <template>
-  <div class="search-bar">
-    <form @submit.prevent="DataFetcher">
-      <input ref="output" type="text" placeholder="Look for Anime.." />
-    </form>
-  </div>
+      <input ref="output" type="text" placeholder="Search for Anime.." 
+      @submit.prevent="DataFetcher"
+      class="search-bar"/>
 </template>
 
 <script>
@@ -16,21 +14,16 @@
   .search-bar {
     display: flex;
     height: 38px;
-    width: 100%;
     margin: 0 auto;
+    width: 100%;
     justify-content: center;
-    max-width: 584px;
-    border: 1px solid #dfe1e5;
+    max-width: 484px;
+    border: 2px solid #dfe1e5;
     box-shadow: none;
-    border-radius: 24px;
+    outline: none;
+    border-radius: 15px;
     background: white;
   }
-  form {
-    width: 100%;
-    align-self: flex-end;
-  }
-  input {
-    border-width: 0px;
-    border: none;
-  }
+
+
 </style>

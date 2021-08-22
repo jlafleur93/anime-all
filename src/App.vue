@@ -1,9 +1,9 @@
 <template>
-  <div>
+
     <Header />
     <Search />
-    <CardItem />
-  </div>
+    <CardItem title="Naruto" image="https://cdn.myanimelist.net/images/anime/13/17405.jpg"/>
+  
 </template>
 
 <script>

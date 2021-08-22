@@ -1,9 +1,22 @@
 <template>
-  <div class="card-bkg"></div>
+  <div class="card-bkg">{{title}}
+    <img :src="image"/>
+  </div>
+
 </template>
 
 <script>
-  export default {};
+  export default {
+
+    props:{
+      title: String,
+      image: String, 
+    },
+
+    
+    
+  };
+  
 </script>
 
 <style lang="scss" scoped>
@@ -16,5 +29,13 @@
     margin: 0 auto;
     width: 95vw;
     height: 40vh;
+  }
+  image {
+    width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 16px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+		transition: 0.4s;
   }
 </style>
