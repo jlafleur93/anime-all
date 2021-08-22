@@ -1,6 +1,6 @@
 <template>
-  <div class="card-area">
-    <div class="card-bkg" v-for="(ani, x) in anime" :key="x">
+  <div class="card-area" v-for="(ani, x) in anime" :key="x">
+    <div class="card-bkg">
       <h3 class="anime-title">{{ ani.title }}</h3>
       <img :src="ani.image" />
       <p class="description">{{ ani.description }}</p>
@@ -14,10 +14,16 @@
       return {
         anime: [
           {
-            tite: "Naruto",
+            title: "Naruto",
             image: "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
             description:
               "Naruto is about Naruto and Sasukes attempt to find acceptence as gay lovers in the Ninja World. Sakura third-wheels their adventures, and everyone hates her.",
+          },
+          {
+            title: "Bleach",
+            image: "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
+            description:
+              "Bleach is about one gingers journey to creating his own soul",
           },
         ],
       };
