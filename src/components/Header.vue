@@ -1,11 +1,6 @@
 <template>
   <header class="header">
-    <div class="icons">
-      <img alt="Anime-All" src="../assets/icon.svg" id="anime-all" />
-      <i class="fas fa-home fa-3x" id="icon-home" />
-
-      <i class="fas fa-calendar fa-3x" />
-    </div>
+    <img alt="Anime-All" src="../assets/icon.svg" id="anime-all" />
   </header>
 </template>
 
@@ -29,7 +24,6 @@
   #anime-all {
     height: 25px;
     grid-column-start: 1;
-    float: left;
     align-self: self-end;
   }
   .icons {

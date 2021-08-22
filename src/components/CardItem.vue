@@ -1,6 +1,8 @@
 <template>
-  <div class="card-bkg">{{title}}
+  <div class="card-bkg">
+    <h3 class="anime-title">{{title}}</h3>
     <img :src="image"/>
+    <p class="description"> {{description}}</p>
   </div>
 
 </template>
@@ -10,7 +12,8 @@
 
     props:{
       title: String,
-      image: String, 
+      image: String,
+      description: String, 
     },
 
     
@@ -22,20 +25,29 @@
 <style lang="scss" scoped>
   .card-bkg {
     height: 20vh;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    background-color: #ff5c8d;
+    display: flex;
+    flex-direction: column;
+    background-color: #A20021;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     margin: 0 auto;
-    width: 95vw;
-    height: 40vh;
+    width: 25vw;
+    height: 65vh;
+    border-radius: 14px;
   }
-  image {
+  img {
     width: 100%;
-		height: 300px;
-		object-fit: cover;
+		height: 400px;
+		object-fit: contain;
 		border-radius: 16px;
 		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 		transition: 0.4s;
+  }
+  .description {
+    display: inline-block;
+    color: #000000;
+  }
+  .anime-title{
+    display: inline-block;
+    color: #000000;
   }
 </style>
