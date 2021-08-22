@@ -1,12 +1,12 @@
 <template>
   <div class="search-bar">
-      <p class="placeholder">Search for Anime..</p>
-      <input 
-      ref="output" 
-      type="text" 
+    <input
+      ref="output"
+      type="text"
       @submit.prevent="DataFetcher"
-      />     
-    </div>
+      placeholder="Search For Anime..."
+    />
+  </div>
 </template>
 
 <script>
@@ -17,19 +17,20 @@
 
 <style lang="scss" scoped>
   .search-bar {
-    display: block;
-    height: 38px;
     margin: 0 auto;
-    width: 100%;
     justify-content: center;
-    max-width: 484px;
+    max-width: 384px;
     box-shadow: none;
     outline: none;
-    border: 14px solid #A20021;
-  }
-  .placeholder{
-    display: inline-block;
+    padding: 6px;
+    border: 10px solid #a20021;
+    border-radius: 18px;
+    transition: 0.4s;
   }
 
-
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+  }
 </style>

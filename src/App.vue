@@ -1,11 +1,9 @@
 <template>
+  <Header />
 
-    <Header />
-    <div class="space"/>
-    <Search />
-    <div class="space"/>
-    <CardItem title="Naruto" image="https://cdn.myanimelist.net/images/anime/13/17405.jpg" description="Naruto is about Naruto and Sasukes attempt to find acceptence as gay lovers in the Ninja World. Sakura third-wheels their adventures, and everyone hates her."/>
-  
+  <Search />
+
+  <CardItem />
 </template>
 
 <script>
@@ -34,7 +32,7 @@
     height: 100vh;
     width: 100vw;
   }
-  .space{
+  .space {
     padding-top: 70px;
   }
 </style>

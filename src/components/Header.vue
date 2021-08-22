@@ -10,6 +10,7 @@
 
 <style lang="scss" scoped>
   .header {
+    display: grid;
     position: fixed;
     background-color: #a00037;
     font-size: 16px;
@@ -25,13 +26,6 @@
     height: 25px;
     grid-column-start: 1;
     align-self: self-end;
-  }
-  .icons {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  #icon-home {
-    grid-column-start: 2;
-    align-self: self-end;
+    justify-self: center;
   }
 </style>
