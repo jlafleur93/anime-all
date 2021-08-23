@@ -3,19 +3,19 @@
 
   <Search />
 
-  <CardItem />
+  <Card />
 </template>
 
 <script>
   import Header from "@/components/Header.vue";
   import Search from "@/components/Search.vue";
-  import CardItem from "@/components/CardItem.vue";
+  import Card from "@/components/CardItem.vue";
 
   export default {
     components: {
       Header,
       Search,
-      CardItem,
+      Card,
     },
   };
 </script>
