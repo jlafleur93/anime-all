@@ -14,4 +14,14 @@
   };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  .description {
+    line-height: 1.2;
+    margin: 0 auto;
+    word-break: normal;
+    color: #000000;
+  }
+  .anime-title {
+    color: #000000;
+  }
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CardItem :anime="anime" />
+    <CardItem v-bind="data.anime" />
   </div>
 </template>
 
@@ -9,38 +9,31 @@
   export default {
     props: ["anime"],
     data() {
+      anime: [
+        {
+          title: "Naruto",
+          image: "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
+          description:
+            "Naruto is about Naruto and Sasukes attempt to find acceptence as gay lovers in the Ninja World. Sakura third-wheels their adventures, and everyone hates her.",
+        },
+        {
+          title: "Bleach",
+          image: "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
+          description:
+            "Bleach is about one gingers journey to creating his own soul",
+        },
+        {
+          title: "One Piece",
+          image: "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
+          description:
+            "One piece is about one autistics boy to dream of becoming the pirate king.",
+        },
+      ];
       return {
         components: {
           CardItem,
         },
-        anime: [
-          {
-            title: "Naruto",
-            image: "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
-            description:
-              "Naruto is about Naruto and Sasukes attempt to find acceptence as gay lovers in the Ninja World. Sakura third-wheels their adventures, and everyone hates her.",
-          },
-          {
-            title: "Bleach",
-            image: "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
-            description:
-              "Bleach is about one gingers journey to creating his own soul",
-          },
-          {
-            title: "One Piece",
-            image: "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
-            description:
-              "One piece is about one autistics boy to dream of becoming the pirate king.",
-          },
-        ],
       };
-    },
-    computed: {
-      style() {
-        return {
-          "grid-template-rows": "repeat(" + this.anime.length + ", 1fr)",
-        };
-      },
     },
   };
 </script>
@@ -66,14 +59,5 @@
     object-fit: contain;
     border-radius: 16px;
     transition: 0.4s;
-  }
-  .description {
-    line-height: 1.2;
-    margin: 0 auto;
-    word-break: normal;
-    color: #000000;
-  }
-  .anime-title {
-    color: #000000;
   }
 </style>
