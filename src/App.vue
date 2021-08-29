@@ -1,8 +1,6 @@
 <template>
   <Header />
-
   <Search />
-
   <Card />
 </template>
 
@@ -31,8 +29,5 @@
     background-color: #ffffff;
     height: 100vh;
     width: 100vw;
-  }
-  .space {
-    padding-top: 70px;
   }
 </style>

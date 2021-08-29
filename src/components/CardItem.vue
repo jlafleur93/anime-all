@@ -1,27 +1,28 @@
 <template>
-  <div v-bind="(ani, x) in anime" key="x">
-    <h3 class="anime-title">{{ ani.title }}</h3>
-    <img :src="ani.image" />
-    <p class="description">{{ ani.description }}</p>
+  <div class="card-margin">
+    <ul class="card-area">
+      <p>Here is where my title is</p>
+      <p>Here is where my info is</p>
+      <p>Here is where my Anime pic should be</p>
+      <p>Here is where my anime genres should be</p>
+    </ul>
   </div>
 </template>
 
 <script>
   export default {
-    props: {
-      anime: Object,
-    },
+    name: "cardItem",
+    props: ["artists", "genre", "country", "name"],
   };
 </script>
 
 <style lang="scss">
-  .description {
-    line-height: 1.2;
-    margin: 0 auto;
-    word-break: normal;
-    color: #000000;
-  }
-  .anime-title {
-    color: #000000;
+  .card-margin {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    width: 31.333%;
+    background-color: #a20021;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 9px;
   }
 </style>

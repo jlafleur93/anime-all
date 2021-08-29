@@ -1,63 +1,49 @@
 <template>
-  <div>
-    <CardItem v-bind="data.anime" />
+  <div class="card-bkg">
+    <CardItem
+      v-for="(art, i) in artists"
+      :key="i"
+      :name="art.name"
+      :genre="art.genre"
+      :country="art.country"
+    />
   </div>
 </template>
 
 <script>
-  import CardItem from "@/CardItem.vue";
+  import CardItem from "./CardItem.vue";
   export default {
-    props: ["anime"],
+    name: "Test",
+    components: {
+      CardItem,
+    },
+
     data() {
-      anime: [
-        {
-          title: "Naruto",
-          image: "https://cdn.myanimelist.net/images/anime/13/17405.jpg",
-          description:
-            "Naruto is about Naruto and Sasukes attempt to find acceptence as gay lovers in the Ninja World. Sakura third-wheels their adventures, and everyone hates her.",
-        },
-        {
-          title: "Bleach",
-          image: "https://cdn.myanimelist.net/images/anime/3/40451.jpg",
-          description:
-            "Bleach is about one gingers journey to creating his own soul",
-        },
-        {
-          title: "One Piece",
-          image: "https://cdn.myanimelist.net/images/anime/6/73245.jpg",
-          description:
-            "One piece is about one autistics boy to dream of becoming the pirate king.",
-        },
-      ];
       return {
-        components: {
-          CardItem,
-        },
+        artists: [
+          { name: "Davido", genre: "afrobeats", country: "Nigeria" },
+          { name: "Burna Boy", genre: "afrobeats", country: "Nigeria" },
+          { name: "AKA", genre: "hiphop", country: "South-Africa" },
+          { name: "Sarkodie", genre: "hiphop", country: "Ghana" },
+          { name: "Stormzy", genre: "hiphop", country: "United Kingdom" },
+          { name: "Lil Nas", genre: "Country", country: "United States" },
+          { name: "Nasty C", genre: "hiphop", country: "South-Africa" },
+          { name: "Shatta-walle", genre: "Reagae", country: "Ghana" },
+          { name: "Khalid", genre: "pop", country: "United States" },
+          { name: "ed-Sheeran", genre: "pop", country: "United Kingdom" },
+        ],
       };
     },
   };
 </script>
 
 <style lang="scss" scoped>
-  .card-area {
-    display: grid;
-    padding-top: 20px;
-  }
-  .card-bkg {
-    background-color: #a20021;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin: 0 auto;
-    width: 20vw;
-    height: 95vh;
-    border-radius: 9px;
-  }
-  img {
-    width: 100%;
-    display: inline-grid;
-
-    height: 230px;
-    object-fit: contain;
-    border-radius: 16px;
-    transition: 0.4s;
-  }
+  //  .card-bkg {
+  //     background-color: #a20021;
+  //     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  //     margin: 0 auto;
+  //     width: 20vw;
+  //     height: 95vh;
+  //     border-radius: 9px;
+  //   }
 </style>
